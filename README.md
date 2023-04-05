@@ -33,45 +33,6 @@ classDiagram
         +ClassItem(nameC: string, idG: string, ser: string, itemname: string, itemnum: int)
     }
 ```
-```mermaid
-classDiagram
- direction RT
- class Restaurant{
- -login():void
-}
-class Restaurant1{
- -cheakin():void
- -cheaout():void
- -Save():void
- -Clear():void
- -fooditems():void
- -exitProgram():void
-}
- class Restaurant2{
- -discountcode():void
- -pay():void
- -back():void
- }
- class Checkpay{
- -discountCode:string
- -minimumPice:double
- +creat(double min):void
- +getDiscount():void
- }
- class Buy{
- -totalPice:double
- +Bill(double pay, double getmoney):void
- +restaurantBill():double
-  }
-  class Class{
-  -name, customerNumber, mail, day, seat:string
-  -time:int
-  +Class(string name, string cutomerNumber, string mail, string day, int time, string seat)
-  }
-  Pay -- Checkpay
-  Pay -- Buy
-  Pay -- Class
-```  
 
 
 ชื่อของผู้พัฒนาโปรแกรม
