@@ -10,11 +10,7 @@
 
 โครงสร้างของโปรแกรม (Class diagram) Mermaid 
 ```mermaid
-classDiagram
-    ClassAdmin <|-- LoginSystem
-    ClassItem
-
-    class ClassAdmin {
+class ClassAdmin {
         <<Entity>>
         +NameAdmin: string
         +PassWord: string
