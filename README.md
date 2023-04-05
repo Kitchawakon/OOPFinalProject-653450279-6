@@ -11,14 +11,30 @@
 โครงสร้างของโปรแกรม (Class diagram) Mermaid 
 ```mermaid
 classDiagram
-    ClassAdmin --> "*" ClassItem : is assigned to
-    ClassAdmin : +NameAdmin : string
-    ClassAdmin : +PassWord : string
-    ClassItem : +CharacterName : string
-    ClassItem : +IDGame : string
-    ClassItem : +Server : string
-    ClassItem : +ItemName : string
-    ClassItem : +ItemNumber : int
+    ClassAdmin <|-- LoginSystem
+    ClassItem
+
+    class ClassAdmin {
+        <<Entity>>
+        +NameAdmin: string
+        +PassWord: string
+    }
+
+    class LoginSystem {
+        <<Service>>
+        -Admin: List<ClassAdmin>
+        +Login(adminname: string, password: string): bool
+    }
+
+    class ClassItem {
+        <<Entity>>
+        +CharacterName: string
+        +IDGame: string
+        +Server: string
+        +ItemName: string
+        +ItemNumber: int
+        +ClassItem(nameC: string, idG: string, ser: string, itemname: string, itemnum: int)
+    }
 ```
 
 
