@@ -10,37 +10,14 @@
 
 โครงสร้างของโปรแกรม (Class diagram) Mermaid 
 classDiagram
-ClassAdmin <|-- LoginSystem
-ClassItem --> "1" LoginSystem : <<uses>>
-ClassAdmin:
-+NameAdmin: string
-+PassWord: string
-LoginSystem:
-+Admin: List<ClassAdmin>
-+Login(adminname: string, password: string): bool
-ClassItem:
-+CharacterName: string
-+IDGame: string
-+Server: string
-+ItemName: string
-+ItemNumber: int
-
-classDiagram
-Class01 <|-- AveryLongClass : Cool
-<<Interface>> Class01
-Class09 --> C2 : Where am i?
-Class09 --* C3
-Class09 --|> Class07
-Class07 : equals()
-Class07 : Object[] elementData
-Class01 : size()
-Class01 : int chimp
-Class01 : int gorilla
-class Class10 {
-  <<service>>
-  int id
-  size()
-}
+    ClassAdmin --> "*" ClassItem : is assigned to
+    ClassAdmin : +NameAdmin : string
+    ClassAdmin : +PassWord : string
+    ClassItem : +CharacterName : string
+    ClassItem : +IDGame : string
+    ClassItem : +Server : string
+    ClassItem : +ItemName : string
+    ClassItem : +ItemNumber : int
 
 
 ชื่อของผู้พัฒนาโปรแกรม
