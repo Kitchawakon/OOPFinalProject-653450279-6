@@ -7,6 +7,7 @@
 
 โครงสร้างของโปรแกรม (Class diagram) Mermaid 
  -classDiagram
+```mermaid    
     ClassAdmin <|-- LoginSystem
     ClassItem --> "1" LoginSystem : <<uses>>
     ClassAdmin:
@@ -21,6 +22,6 @@
     +Server: string
     +ItemName: string
     +ItemNumber: int
-
+```
 ชื่อของผู้พัฒนาโปรแกรม
  - นายกฤตชวกร ชวลิตกิตติวงศ์ รหัสนักศึกษา 653450279-6
